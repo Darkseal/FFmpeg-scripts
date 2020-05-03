@@ -1,4 +1,3 @@
-  
 #! /bin/bash
  
 VBR="1500k"
