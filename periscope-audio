@@ -16,8 +16,6 @@ ffmpeg \
  -i "$VIDEO_SOURCE" \
  -thread_queue_size 512 \
  -i "$AUDIO_SOURCE" \
- -map 0:v:0 -map 1:a:0 \
- -map_metadata:g 1:g \
  -c:v libx264 -tune stillimage -pix_fmt yuv420p -preset $QUAL -r $FPS -g $(($FPS *2)) -b:v $VBR \
  -c:a $AUDIO_ENCODER -threads 6 -ar 44100 -b:a 128k -bufsize 512k -pix_fmt yuv420p \
  -f flv $TWITTER_URL/$TWITTER_KEY
